@@ -1,14 +1,12 @@
 $('.part').hover(
     function(){
         var namePlaceText = $(this).attr('nameplace');
+        console.log(namePlaceText);
         $('.description').text(namePlaceText);
         $('.description').fadeIn();
-        //$(this).append("<span> Текст подсказки </span>");
-        //$(this).find("span:last").css("background-color", "red");
     },
     function(){
         $('.description').fadeOut(50);
-        //$(this).find("span:last").remove();
     }
 );
 
