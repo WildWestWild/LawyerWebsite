@@ -1,0 +1,42 @@
+body { margin: 0; padding: 0;}
+
+.map{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+svg{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.part{
+    opacity: 0;
+}
+
+.part:hover{
+    transition: opacity .2s ease;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.description{
+    display: none;
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 100px;
+    box-shadow: 0 0 32px 10px #ccc;
+    margin-left: 30%;
+    bottom: 85%;
+    font-family: 'Font Name', sans-serif;
+    font-size: 32px;
+}
