@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
 
-body { margin: 0; padding: 0; font-family: 'Open Sans', sans-serif;}
-
 .map{
     position: relative;
     text-align: center;
@@ -52,9 +50,9 @@ svg{
 }
 
 .navbar{
-    padding-left: 25%;
+    padding-left: 15%;
     padding-left: auto;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .nav-item{
@@ -62,15 +60,58 @@ svg{
 }
 
 .btn-primary{
-    font-size: 30px;
+    font-size: 20px;
     background-color: rgb(65, 151, 221);
       
 }
 
 .btn{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .whitefont{
     color: #ffffff;
+    font-size: 20px;
+}
+
+.smallwhitefont{
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.container-targer{
+    font-size: 20px;
+}
+
+.backimage{
+    height: 100%;
+    background: #fff url(/media/Фон\ для\ сайта.jpg) center center/cover no-repeat;
+}
+
+.logo{
+    margin: 2%;
+    width: 30%;
+    height: 30%;
+}
+
+.col-md-12{
+    background-color: rgba(25, 105, 170, 0.904);
+}
+
+.margin{
+    margin: 10px;
+}
+
+.fullmargintop{
+    margin-top: 90px;
+}
+
+.allpage{
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.space{
+    margin-top: 150px;
 }
