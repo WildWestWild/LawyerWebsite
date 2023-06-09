@@ -1,10 +1,16 @@
 $('.part').hover(
-    function(){
+    function(e){
         //TODO сделать нормальные подсказки
         var namePlaceText = $(this).attr('nameplace');
         console.log(namePlaceText);
-        $('.description').text(namePlaceText);
-        $('.description').fadeIn();
+        var evt = window.event;
+        var description = $('.description');
+        description.text(namePlaceText);
+        description.css({
+          'left': (evt.clientX + 20) + 'px',
+          'top': (evt.clientY + 20) + 'px'
+        });
+        description.fadeIn();
     },
     function(){
         $('.description').fadeOut(50);
