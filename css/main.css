@@ -149,3 +149,7 @@ h1 {
     font-weight: bold;
     color: rgba(25, 105, 170, 0.904);
 }
+
+.carousel{
+  height: 1000px;
+}
