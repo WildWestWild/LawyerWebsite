@@ -90,8 +90,8 @@ svg{
 
 .logo{
     margin: 2%;
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
 }
 
 .col-md-12{
@@ -147,3 +147,10 @@ svg{
     line-height:2;
     color:#888;
    }
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgba(25, 105, 170, 0.904);
+}

@@ -1,5 +1,6 @@
 $('.part').hover(
     function(){
+        //TODO сделать нормальные подсказки
         var namePlaceText = $(this).attr('nameplace');
         console.log(namePlaceText);
         $('.description').text(namePlaceText);
