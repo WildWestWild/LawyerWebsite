@@ -111,6 +111,14 @@ svg{
     margin-top: 130px;
 }
 
+.space-from-header{
+    margin-top: 100px;
+}
+
+.space-from-footer{
+    margin-bottom: 0px;
+}
+
 .card{
     background: none;
 }

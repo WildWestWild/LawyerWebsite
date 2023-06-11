@@ -1,3 +1,7 @@
+$(document).ready(SetOffset);
+
+$(window).resize(SetOffset);
+
 $('.part').hover(
     function(e){
         var namePlaceText = $(this).attr('nameplace');
@@ -40,3 +44,19 @@ $('.part').click(function () {
         }
       })
 });
+
+
+function SetOffset(){ 
+  let heightHeader = $('nav').outerHeight();
+  let heightFooter =  $('footer').outerHeight();
+
+  console.log(heightHeader);
+
+  $('.space-from-header').css({
+    'margin-top': heightHeader + 'px'
+  });
+
+  $('.space-from-footer').css({
+    'margin-bottom': heightFooter + 'px'
+  });  
+}
