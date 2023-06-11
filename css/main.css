@@ -45,7 +45,7 @@ svg{
 }
 
 .navbar{
-    font-size: 20px;
+    font-size: 14px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,18 +55,18 @@ svg{
 }
 
 .btn-primary{
-    font-size: 20px;
+    font-size: 14px;
     background-color: rgb(65, 151, 221);
       
 }
 
 .btn{
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .whitefont{
     color: #ffffff;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .smallwhitefont{
@@ -98,7 +98,7 @@ svg{
 }
 
 .fullmargintop{
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .allpage{
