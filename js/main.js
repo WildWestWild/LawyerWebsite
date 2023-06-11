@@ -1,8 +1,8 @@
 $('.part').hover(
     function(e){
-        //TODO сделать нормальные подсказки
         var namePlaceText = $(this).attr('nameplace');
         console.log(namePlaceText);
+        //TODO: Рассмотреть возможность более точно определять координаты
         var evt = window.event;
         var description = $('.description');
         description.text(namePlaceText);
