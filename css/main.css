@@ -151,5 +151,21 @@ h1 {
 }
 
 .carousel{
-  height: 1000px;
+  max-height: 1000px;
+  margin-bottom: 10%;
+}
+
+.image-carousel{
+    max-height: 700px;
+    margin-top: 10px;
+}
+
+.font-carousel{
+    color: rgba(25, 105, 170, 0.904);
+}
+
+@media (max-width: 1200px) {
+    .fixed-bottom{
+        position: static;
+    }
 }
