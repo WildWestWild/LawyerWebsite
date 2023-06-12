@@ -48,10 +48,11 @@ svg{
     font-size: 14px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
 }
 
 .nav-item{
-   margin: 20px;
+   margin: 10px;
 }
 
 .btn-primary{
