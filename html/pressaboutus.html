@@ -13,9 +13,13 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid">
-        <div class="navbar" id="navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item btn">
               <a class="nav-link" href="targetproject.html">Цель проекта</a>
@@ -37,10 +41,11 @@
       </div>
     </nav>
   </header>
+  <div class="space-from-header"></div>
   <div style="background: #fff url(../media/Фон\ для\ сайта.jpg) center center/cover no-repeat;">
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="30000">
           <div class="card container">
             <img src="../media/Фото из личного архива Олега Чернова.jpg" class="card-img-top image-carousel" alt="...">
             <div class="card-body">
@@ -66,10 +71,9 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
+        <div class="carousel-item" data-bs-interval="30000">
           <div class="card container">
-            <img src="../media/Собрание за столом.png"
-              class="card-img-top image-carousel" alt="...">
+            <img src="../media/Собрание за столом.png" class="card-img-top image-carousel" alt="...">
             <div class="card-body">
               <h5 class="card-title font-carousel"><a
                   href="https://epp.genproc.gov.ru/web/proc_50/mass-media/news?item=88575078"> Мытищинский городской
@@ -128,10 +132,9 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
