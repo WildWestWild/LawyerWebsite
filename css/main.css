@@ -49,18 +49,17 @@ svg{
 }
 
 .btn-primary{
-    font-size: 14px;
     background-color: rgb(65, 151, 221);
       
 }
 
 .btn{
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .whitefont{
     color: #ffffff;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .smallwhitefont{
@@ -68,8 +67,12 @@ svg{
     font-size: 10px;
 }
 
+.container{
+    font-size: 18px;
+}
+
 .container-targer{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .backimage{
@@ -168,6 +171,14 @@ h1 {
     color: rgba(25, 105, 170, 0.904);
 }
 
+.navbar-toggler-icon{
+    padding: 50px;
+}
+
+p{
+    font-size: 25px;
+}
+
 @media (max-width: 1200px) {
     .fixed-bottom{
         position: static;
@@ -175,5 +186,38 @@ h1 {
     .about{
         margin-right: 0em;
         margin-left: 0em;
+    }
+    p{
+        font-size: 40px;
+    }
+    .btn{
+        font-size: 40px;
+    }
+    .whitefont{
+        color: #ffffff;
+        font-size: 40px;
+    }
+    
+    .smallwhitefont{
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .container{
+        font-size: 40px;
+    }
+    
+    .container-targer{
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+    h3{
+        font-size: 40px;
+    }
+    a{
+        font-size: 40px;
     }
 }
