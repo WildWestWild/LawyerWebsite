@@ -68,7 +68,7 @@ function GetInformationAboutLawyer(email, image){
   let lawyerInfoJson = lawyerInfoArray.find(item => item.image == image);
   
   Swal.fire({
-    title: '<div class="container"><h3>' + lawyerInfoJson.fio +'</h3> <hr> <p align="left" style="font-size: 15px;">' + lawyerInfoJson.text +'</p></div>',
+    title: '<div class="container"><h3>' + lawyerInfoJson.fio +'</h3> <hr> <p align="left" class="popupfontsize">' + lawyerInfoJson.text +'</p></div>',
     showDenyButton: true,
     showCloseButton: true,
     confirmButtonText: 'Позвонить',

@@ -175,6 +175,10 @@ h1 {
     padding: 50px;
 }
 
+.popupfontsize{
+    font-size: 16px;
+}
+
 p{
     font-size: 25px;
 }
@@ -219,5 +223,8 @@ p{
     }
     a{
         font-size: 40px;
+    }
+    .popupfontsize{
+        font-size: 30px;
     }
 }
