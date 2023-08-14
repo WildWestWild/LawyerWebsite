@@ -54,7 +54,7 @@ $('.part').click(function () {
 
 function GetLinks(email){
     let lawyerInfoArray = this.lawyerJson[email];
-    let html = '<div>';
+    let html = '<div> <br> ';
     lawyerInfoArray.forEach(element => {
       html += '<button type="button" class="btn btn-primary" onclick=GetInformationAboutLawyer("' + email + '","' + element.image +'")>' + element.fio + '</button><br><br>';
     });
@@ -65,27 +65,27 @@ function GetLinks(email){
 
 function GetInformationAboutLawyer(email, image){
   let lawyerInfoArray = this.lawyerJson[email];
-  let lawyerInfoJson = lawyerInfoArray.find(item => item.image == image);
+  let lawyerInfoPersonJson = lawyerInfoArray.find(item => item.image == image);
   
   Swal.fire({
-    title: '<div class="container"><h3>' + lawyerInfoJson.fio +'</h3> <hr> <p align="left" class="popupfontsize">' + lawyerInfoJson.text +'</p></div>',
+    title: '<div class="container"><h3>' + lawyerInfoPersonJson.fio +'</h3> <hr> <p align="left" class="popupfontsize">' + lawyerInfoPersonJson.text +'</p></div>',
     showDenyButton: true,
     showCloseButton: true,
     confirmButtonText: 'Позвонить',
     confirmButtonColor: '#01DF74',
     denyButtonText: `Написать`,
     denyButtonColor: '#01A9DB',
-    imageUrl: lawyerInfoJson.image,
+    imageUrl: lawyerInfoPersonJson.image,
     imageWidth: 400,
     imageHeight: 200,
     imageAlt: 'Изображение адвоката',
   }).then((result) => {
     if (result.isConfirmed) {
       // Логика звонка
-      window.location.href = lawyerInfoJson.phone;
+      window.location.href = lawyerInfoPersonJson.phone;
     } else if (result.isDenied) {
       // Логика отправки Email
-      window.location.href = email;
+      window.location.href = lawyerInfoPersonJson.email;
     }
   });
 }
