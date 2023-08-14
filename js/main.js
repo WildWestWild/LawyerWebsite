@@ -4,11 +4,10 @@ $(window).resize(SetOffset);
 
 $('.part').hover(
     function(e){
-        var namePlaceText = $(this).attr('nameplace');
-        console.log(namePlaceText);
+        let namePlaceText = $(this).attr('nameplace');
         //TODO: Рассмотреть возможность более точно определять координаты
-        var evt = window.event;
-        var description = $('.description');
+        let evt = window.event;
+        let description = $('.description');
         description.text(namePlaceText);
         description.css({
           'left': (evt.clientX + 20) + 'px',
@@ -22,14 +21,15 @@ $('.part').hover(
 );
 
 $('.part').click(function () { 
-    var partElement = $(this);
+    let partElement = $(this);
     Swal.fire({
         icon: 'info',
         title: 'Региональный лидер  <br> <hr> ' + partElement.attr('namelead') + ' <br> ',
         showDenyButton: true,
         showCancelButton: true,
-        cancelButtonText: "Выйти",
-        cancelButtonColor: '#BDBDBD',
+        showCloseButton: true,
+        cancelButtonText: "Адвокаты",
+        cancelButtonColor: '#b81414',
         confirmButtonText: 'Позвонить',
         confirmButtonColor: '#01DF74',
         denyButtonText: `Написать`,
@@ -41,16 +41,59 @@ $('.part').click(function () {
         } else if (result.isDenied) {
           // Логика отправки Email
           window.location.href = partElement.attr('email');
+        } else if(result.dismiss == 'cancel'){
+          Swal.fire({
+            title: GetLinks(partElement.attr('email')),//'<div><a href="#">Павлов Алексей Сергевич </a></div> <br> <div><a href="#">Виктор Андреевич Кравцев</a></div>',
+            showCloseButton: true,
+            showConfirmButton: false
+          });
         }
       })
 });
 
 
+function GetLinks(email){
+    let lawyerInfoArray = this.lawyerJson[email];
+    let html = '<div>';
+    lawyerInfoArray.forEach(element => {
+      html += '<button type="button" class="btn btn-primary" onclick=GetInformationAboutLawyer("' + email + '","' + element.image +'")>' + element.fio + '</button><br><br>';
+    });
+    html += '</div>';
+
+    return html;
+}
+
+function GetInformationAboutLawyer(email, image){
+  let lawyerInfoArray = this.lawyerJson[email];
+  let lawyerInfoJson = lawyerInfoArray.find(item => item.image == image);
+  
+  Swal.fire({
+    title: '<div class="container"><h3>' + lawyerInfoJson.fio +'</h3> <hr> <p align="left" style="font-size: 15px;">' + lawyerInfoJson.text +'</p></div>',
+    showDenyButton: true,
+    showCloseButton: true,
+    confirmButtonText: 'Позвонить',
+    confirmButtonColor: '#01DF74',
+    denyButtonText: `Написать`,
+    denyButtonColor: '#01A9DB',
+    imageUrl: lawyerInfoJson.image,
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: 'Изображение адвоката',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Логика звонка
+      window.location.href = lawyerInfoJson.phone;
+    } else if (result.isDenied) {
+      // Логика отправки Email
+      window.location.href = email;
+    }
+  });
+}
+
+
 function SetOffset(){ 
   let heightHeader = $('nav').outerHeight();
   let heightFooter =  $('footer').outerHeight();
-
-  console.log(heightHeader);
 
   $('.space-from-header').css({
     'margin-top': heightHeader + 'px'
